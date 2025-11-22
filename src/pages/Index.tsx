@@ -8,29 +8,29 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const menuItems = [
-    { id: 'drinks', name: '☕ DRINKS', emoji: '☕' },
-    { id: 'food', name: '🍰 FOOD', emoji: '🍰' },
-    { id: 'about', name: '📖 STORY', emoji: '📖' },
-    { id: 'events', name: '🎯 QUESTS', emoji: '🎯' },
+    { id: 'drinks', name: '☕ НАПИТКИ', emoji: '☕' },
+    { id: 'food', name: '🍰 ЕДА', emoji: '🍰' },
+    { id: 'about', name: '📖 ИСТОРИЯ', emoji: '📖' },
+    { id: 'events', name: '🎯 СОБЫТИЯ', emoji: '🎯' },
   ];
 
   const drinks = [
-    { name: 'Health Potion', subtitle: 'Эспрессо', icon: '♥️', hearts: 3, color: 'bg-red-600' },
-    { name: 'Mana Elixir', subtitle: 'Латте', icon: '🔵', hearts: 3, color: 'bg-pixel-blue' },
-    { name: 'Speed Boost', subtitle: 'Американо', icon: '⚡', hearts: 3, color: 'bg-pixel-yellow' },
-    { name: 'Critical Hit', subtitle: 'Капучино', icon: '💥', hearts: 3, color: 'bg-pixel-orange' },
+    { name: 'Зелье Здоровья', subtitle: 'Эспрессо', icon: '♥️', hearts: 3, color: 'bg-red-600' },
+    { name: 'Эликсир Маны', subtitle: 'Латте', icon: '🔵', hearts: 3, color: 'bg-pixel-blue' },
+    { name: 'Ускорение', subtitle: 'Американо', icon: '⚡', hearts: 3, color: 'bg-pixel-yellow' },
+    { name: 'Критический Удар', subtitle: 'Капучино', icon: '💥', hearts: 3, color: 'bg-pixel-orange' },
   ];
 
   const food = [
-    { name: 'Power Up', subtitle: 'Маффин', icon: '⬆️', color: 'bg-pixel-green' },
-    { name: 'Extra Life', subtitle: 'Чизкейк', icon: '🍰', color: 'bg-pixel-pink' },
-    { name: 'Boss Battle', subtitle: 'Торт', icon: '🎂', color: 'bg-pixel-purple' },
+    { name: 'Усиление Силы', subtitle: 'Маффин', icon: '⬆️', color: 'bg-pixel-green' },
+    { name: 'Дополнительная Жизнь', subtitle: 'Чизкейк', icon: '🍰', color: 'bg-pixel-pink' },
+    { name: 'Битва с Боссом', subtitle: 'Торт', icon: '🎂', color: 'bg-pixel-purple' },
   ];
 
   const events = [
-    { name: 'Retro Tournaments', icon: '🎮', day: 'Weekly' },
-    { name: 'NES Night', icon: '🕹️', day: 'Thursday' },
-    { name: 'Cosplay Saturday', icon: '🎪', day: 'Saturday' },
+    { name: 'Ретро Турниры', icon: '🎮', day: 'Каждую Неделю' },
+    { name: 'NES Вечер', icon: '🕹️', day: 'Четверг' },
+    { name: 'Косплей Суббота', icon: '🎪', day: 'Суббота' },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Index = () => {
                 PIXEL BREW
               </h1>
               <p className="text-xs md:text-sm text-pixel-pink">
-                Where every byte is delicious!
+                Каждый байт восхитителен!
               </p>
               <div className="text-xs md:text-sm text-pixel-purple animate-blink">
                 ═══════════════════════════
@@ -55,13 +55,13 @@ const Index = () => {
                 onClick={() => setActiveSection('drinks')}
                 className="bg-pixel-purple hover:bg-pixel-pink text-foreground font-bold px-8 py-6 text-lg border-4 border-foreground shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] transition-all"
               >
-                ⚡ START GAME ⚡
+                ⚡ НАЧАТЬ ИГРУ ⚡
               </Button>
               <div className="text-xs md:text-sm text-pixel-orange mt-6">
                 ═══════════════════════════
               </div>
               <div className="text-sm md:text-base text-pixel-yellow">
-                High Score: {score} ☕
+                Рекорд: {score} ☕
               </div>
               <div className="text-xs md:text-sm text-pixel-orange">
                 ═══════════════════════════
@@ -94,9 +94,9 @@ const Index = () => {
                 onClick={() => setActiveSection('home')}
                 className="bg-muted hover:bg-pixel-orange text-foreground border-2 border-foreground"
               >
-                ← BACK
+                ← НАЗАД
               </Button>
-              <h2 className="text-xl md:text-2xl text-pixel-purple">☕ INVENTORY</h2>
+              <h2 className="text-xl md:text-2xl text-pixel-purple">☕ ИНВЕНТАРЬ</h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
@@ -140,9 +140,9 @@ const Index = () => {
                 onClick={() => setActiveSection('home')}
                 className="bg-muted hover:bg-pixel-orange text-foreground border-2 border-foreground"
               >
-                ← BACK
+                ← НАЗАД
               </Button>
-              <h2 className="text-xl md:text-2xl text-pixel-green">🍰 POWER-UPS</h2>
+              <h2 className="text-xl md:text-2xl text-pixel-green">🍰 УСИЛЕНИЯ</h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4">
@@ -175,15 +175,15 @@ const Index = () => {
                 onClick={() => setActiveSection('home')}
                 className="bg-muted hover:bg-pixel-orange text-foreground border-2 border-foreground"
               >
-                ← BACK
+                ← НАЗАД
               </Button>
-              <h2 className="text-xl md:text-2xl text-pixel-blue">📖 BACKSTORY</h2>
+              <h2 className="text-xl md:text-2xl text-pixel-blue">📖 ПРЕДЫСТОРИЯ</h2>
             </div>
 
             <Card className="p-8 bg-muted border-4 border-pixel-blue space-y-4">
               <div className="text-xs md:text-sm leading-relaxed">
                 <p className="mb-4">
-                  &gt; Loading story...
+                  &gt; Загрузка истории...
                   <span className="animate-blink">_</span>
                 </p>
                 <p className="mb-4">
@@ -210,9 +210,9 @@ const Index = () => {
                 onClick={() => setActiveSection('home')}
                 className="bg-muted hover:bg-pixel-orange text-foreground border-2 border-foreground"
               >
-                ← BACK
+                ← НАЗАД
               </Button>
-              <h2 className="text-xl md:text-2xl text-pixel-orange">🎯 QUESTS</h2>
+              <h2 className="text-xl md:text-2xl text-pixel-orange">🎯 КВЕСТЫ</h2>
             </div>
 
             <div className="space-y-4">
@@ -229,16 +229,16 @@ const Index = () => {
                         <div className="text-xs text-pixel-yellow">{event.day}</div>
                       </div>
                     </div>
-                    <div className="text-pixel-green text-sm">→ JOIN</div>
+                    <div className="text-pixel-green text-sm">→ УЧАСТВОВАТЬ</div>
                   </div>
                 </Card>
               ))}
 
               <Card className="p-6 bg-pixel-purple border-4 border-pixel-yellow">
                 <div className="text-center space-y-2">
-                  <div className="text-lg animate-blink">🎁 SECRET CODE 🎁</div>
-                  <div className="text-xs">Enter code: PIXEL2025</div>
-                  <div className="text-sm text-pixel-yellow">Get 15% OFF!</div>
+                  <div className="text-lg animate-blink">🎁 СЕКРЕТНЫЙ КОД 🎁</div>
+                  <div className="text-xs">Введи код: PIXEL2025</div>
+                  <div className="text-sm text-pixel-yellow">Скидка 15%!</div>
                 </div>
               </Card>
             </div>
@@ -247,7 +247,7 @@ const Index = () => {
       )}
 
       <div className="fixed bottom-4 right-4 bg-card border-4 border-primary p-3 text-xs animate-blink">
-        💾 AUTOSAVED
+        💾 АВТОСОХРАНЕНО
       </div>
     </div>
   );
